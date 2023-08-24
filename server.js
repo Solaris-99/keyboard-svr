@@ -74,10 +74,10 @@ server.on('connection', (socket)=> {
     socket.on('data', (data)=>{
         console.log('Recieved: '+data) // keyboard functions
         //data_number -> WINDOW KEY
-        if(data == "SHIFT"){
+        if(data == "SHIFT" || data == "RSHIFT"){
             modifier_table[0] = !modifier_table[0]
         }
-        else if (data=="CTRL"){
+        else if (data=="CTRL" || data == "RCTRL"){
             modifier_table[1] = !modifier_table[1]
         }
         else if (data =="ALT"){
